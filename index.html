@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Notes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    
+    <header>
+        <h1>My Notes</h1>
+        <div>
+            <button class="addNoteBtn" onclick="openNote()">+ Add Note</button>
+            <button id="themeToggle" class="themeToggleBtn">🌙</button>
+        </div>
+    </header>
+    <main id="notesContainer" class="notesGrid">
+
+    </main>
+    <dialog id="noteDialog">
+        <div class="dialogContent">
+            <div class="dialogHeader">
+                <h2 class="DialogTitle" id="dialogTitle">Add New Note</h2>
+                <button class="closeBtn" onclick="closeNote()">x</button>
+            </div>
+            <form id="noteForm">
+               <div class="formGroup">
+                <label for="noteTitle" class="formLabel">Title</label>
+                <input type="text" id="noteTitle" class="formInput" placeholder="Enter Title" required>
+               </div> 
+
+               <div class="formGroup">
+                <label for="noteContent" class="formContent">Content</label>
+                <textarea id="noteContent" class="formTextArea" placeholder="Enter Note" required></textarea>
+               </div>
+
+               <div class="dialogActions">
+                <button type="button" class="cancelBtn" onclick="closeNote()">Cancel</button>
+                <button type="submit" class="saveBtn">Save Note</button>
+               </div>
+
+            </form>
+        </div>
+
+    </dialog>
+
+</body>
+</html>
